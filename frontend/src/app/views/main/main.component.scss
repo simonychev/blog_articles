@@ -1,0 +1,397 @@
+@import "../../../assets/styles/mixins";
+@import "../../../assets/styles/variables";
+
+section {
+  margin-bottom: 120px;
+}
+
+.main {
+
+  .container {
+
+    .banner-carousel {
+      position: relative;
+
+      .main-banner {
+        width: 100%;
+        height: 500px;
+        background-position: center;
+        background-size: cover;
+        padding: 100px 0 85px 80px;
+        box-sizing: border-box;
+
+        .main-banner-header {
+          color: $blue-text-color;
+          font-family: 'Montserrat', sans-serif;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 600;
+          letter-spacing: 5px;
+          text-transform: uppercase;
+        }
+
+        .main-banner-title {
+          max-width: 610px;
+          color: #FFFFFF;
+          font-family: 'Lora', sans-serif;
+          font-size: 50px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 130%;
+          margin-bottom: 20px;
+
+          span {
+            color: $blue-text-color;
+          }
+        }
+
+        .main-banner-description {
+          color: #FFFFFF;
+          font-size: 24px;
+          line-height: 130%;
+          max-width: 456px;
+        }
+
+        .button {
+          margin-top: 40px;
+          width: 163px;
+        }
+      }
+
+      .banner-arrows {
+        display: flex;
+
+        a {
+          top: calc(50% - 40px);
+          display: flex;
+          position: absolute;
+          cursor: pointer;
+
+          &.move-backward {
+            left: 10px;
+            z-index: 2;
+          }
+
+          &.move-forward {
+            right: 10px;
+            z-index: 2;
+          }
+        }
+      }
+    }
+  }
+}
+
+.main-service {
+
+  .container {
+
+    .main-service-title {
+      @include head-lora-38;
+      margin-bottom: 40px;
+    }
+
+    .service-cards {
+      display: flex;
+      justify-content: space-between;
+
+      .service-card {
+        width: 291px;
+        height: 498px;
+        box-sizing: border-box;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        .service-card-image {
+          border-radius: 5px;
+          margin-bottom: 15px;
+          width: 291px;
+          height: 291px;
+          background-size: cover;
+          background-position: top;
+        }
+
+        .service-card-name {
+          margin-bottom: 10px;
+          color: $blue-text-color;
+          font-family: 'Montserrat', sans-serif;
+          font-size: 20px;
+          font-weight: 500;
+        }
+
+        .service-card-description {
+          min-height: 90px;
+          color: $black-text-color;
+          font-size: 14px;
+          line-height: 130%;
+          margin-bottom: 15px;
+        }
+
+        .service-card-info {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .service-card-price {
+            color: $blue-text-color;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+          }
+
+          .service-card-action {
+
+            button {
+              width: 163px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.company-info {
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .company-info-image {
+      margin-right: 68px;
+    }
+
+    .company-info-text {
+      color: #1E1A2B;
+      font-size: 14px;
+
+      .company-info-text-title {
+        @include head-lora-38;
+        margin-bottom: 20px;
+      }
+
+      .company-info-text-description {
+        line-height: 130%;
+        max-width: 633px;
+        margin-bottom: 40px;
+
+        span {
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 500;
+        }
+      }
+
+      .company-info-text-advantages {
+
+        .company-info-text-advantages-title {
+          @include head-lora-38;
+          font-size: 26px;
+        }
+
+        .advantages-items {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+
+          .advantages-item {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+
+            .advantages-item-circle {
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              background-color: #B9D5FD;
+              margin-right: 20px;
+              position: relative;
+
+              span {
+                font-family: 'Lora', sans-serif;
+                font-weight: 500;
+                font-size: 50px;
+                color: $blue-text-color;
+                position: absolute;
+                bottom: -5px;
+                right: 5px;
+
+                &.item-circle-one {
+                  right: 10px;
+                }
+              }
+
+            }
+
+            .advantages-item-text {
+              width: 256px;
+              height: 90px;
+              line-height: 130%;
+
+              span {
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 500;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.popular-articles {
+
+  .container {
+
+    .popular-articles-title {
+      @include head-lora-38;
+      margin-bottom: 40px;
+    }
+
+    .article-cards {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .popular-articles-action {
+      margin-top: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      cursor: pointer;
+
+      span {
+        margin-right: 14px;
+        color: $blue-text-color;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.reviews {
+
+  .container {
+
+    .reviews-title {
+      @include head-lora-38;
+      margin-bottom: 20px;
+    }
+
+    .reviews-carousel {
+      position: relative;
+
+      .review-item {
+        width: 396px;
+        height: 267px;
+        border-radius: 5px;
+        border: 2px solid $blue-text-color;
+        box-sizing: border-box;
+        padding: 30px;
+
+        .review-item-head {
+          display: flex;
+          align-items: center;
+          margin-bottom: 15px;
+
+          .review-item-image {
+            width: 60px;
+            height: 60px;
+            background-position: center;
+            background-size: cover;
+            margin-right: 26px;
+          }
+
+          .review-item-name {
+            color: $blue-text-color;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+          }
+        }
+
+        .review-item-text {
+          color: $black-text-color;
+          line-height: 140%
+        }
+      }
+
+      .reviews-arrows {
+        display: flex;
+
+        a {
+          top: calc(50% - 5px);
+          display: flex;
+          position: absolute;
+          cursor: pointer;
+
+          &.move-backward {
+            left: -25px;
+          }
+
+          &.move-forward {
+            right: -25px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.contacts {
+
+  .container {
+    display: flex;
+
+    .contacts-maps {
+      margin-right: 26px;
+
+      iframe {
+        border-radius: 5px;
+      }
+    }
+
+    .contacts-info {
+
+      .contacts-info-title {
+        @include head-lora-38;
+      }
+
+      .contact-item {
+        margin-top: 20px;
+
+        .contact-item-title {
+          color: $blue-text-color;
+          font-family: 'Montserrat', sans-serif;
+          font-size: 20px;
+          font-weight: 500;
+          margin-bottom: 10px;
+        }
+
+        .contact-item-description {
+          color: $black-text-color;
+          font-size: 14px;
+          line-height: 130%;
+          max-width: 501px;
+
+          .contact-item-phone {
+            text-decoration: none;
+            color: $black-text-color;
+            font-size: 14px;
+          }
+
+          a:nth-child(2) {
+            margin: 0 20px;
+          }
+        }
+      }
+    }
+  }
+}

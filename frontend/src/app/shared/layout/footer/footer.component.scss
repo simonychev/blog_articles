@@ -1,0 +1,97 @@
+@import "../../../../assets/styles/variables";
+
+.footer {
+  background-color: #B9D5FD;
+  padding-top: 40px;
+  padding-bottom: 54px;
+
+  .container {
+
+    .footer-top {
+      display: flex;
+      align-items: center;
+      margin-bottom: 40px;
+
+      .footer-logo {
+        margin-right: 40px;
+        cursor: pointer;
+      }
+
+      .footer-menu {
+
+        ul {
+          margin: 0;
+          padding: 0;
+          display: flex;
+
+          li {
+            list-style: none;
+            margin-right: 20px;
+            border-bottom: 1px solid transparent;
+
+            &.active {
+              border-bottom-color: #071739
+            }
+
+            a {
+              cursor: pointer;
+              text-decoration: none;
+              font-family: 'Montserrat', sans-serif;
+              color: $black-text-color;
+
+              &:hover {
+                color: #FFFFFF;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .footer-center {
+      display: flex;
+      align-items: baseline;
+      margin-bottom: 6px;
+
+      .footer-center-item {
+        margin-right: 60px;
+
+        a {
+          text-decoration: none;
+        }
+
+        .footer-center-title {
+          color: $blue-text-color;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 500;
+          margin-bottom: 10px;
+        }
+
+        .footer-center-description {
+          max-width: 253px;
+          color: $black-text-color;
+          line-height: 130%;
+
+          a {
+            text-decoration: none;
+            color: $black-text-color;
+
+          }
+
+          svg {
+            margin-top: 5px;
+            margin-right: 12px;
+          }
+        }
+
+        .button {
+          margin-top: 10px;
+        }
+      }
+    }
+
+    .footer-bottom {
+      color: $blue-text-color;
+    }
+  }
+}

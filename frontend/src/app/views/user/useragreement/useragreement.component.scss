@@ -1,0 +1,18 @@
+@import "../../../../assets/styles/variables";
+
+.useragreement {
+  padding-top: 80px;
+  padding-bottom: 120px;
+
+  .container {
+
+    h2 {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    h3, h2 {
+      color: $blue-text-color;
+    }
+  }
+}

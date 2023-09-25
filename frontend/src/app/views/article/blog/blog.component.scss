@@ -1,0 +1,104 @@
+@import "../../../../assets/styles/mixins";
+@import "../../../../assets/styles/variables";
+
+.blog {
+  padding-top: 80px;
+  padding-bottom: 120px;
+
+  .container {
+
+    .blog-title {
+      @include head-lora-38;
+      margin-bottom: 40px;
+    }
+
+    .blog-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 40px;
+
+      .blog-applied-filters {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .blog-applied-filter {
+          padding: 8px 20px;
+          border: 2px solid $blue-text-color;
+          border-radius: 5px;
+          display: flex;
+          align-items: center;
+          margin-right: 20px;
+
+          &:last-child {
+            margin-right: 0;
+          }
+
+          span {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%;
+            margin-right: 9px;
+            color: $blue-text-color;
+          }
+
+          a svg {
+            display: block;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .blog-items {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px 24px;
+    }
+
+    .pagination {
+      margin-top: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .pagination-arrow {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &.disabled {
+          opacity: 0.5;
+        }
+      }
+
+      .pagination-pages {
+        margin: 0 40px;
+        display: flex;
+        align-items: center;
+
+        a.pagination-page {
+          text-decoration: none;
+          margin-right: 20px;
+          cursor: pointer;
+          font-size: 20px;
+          color: $black-text-color;
+
+
+
+          &.active {
+            color: #B9D5FD;
+          }
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}

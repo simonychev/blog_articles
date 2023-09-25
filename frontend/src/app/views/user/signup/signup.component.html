@@ -1,0 +1,59 @@
+<section class="signup" [formGroup]="signupForm">
+  <div class="container">
+    <div class="auth-form">
+      <div class="auth-form-title">
+        Регистрация на сайте
+      </div>
+      <div class="auth-inputs">
+        <div class="auth-input">
+          <input type="text" class="input" formControlName="name"
+                 [ngStyle]="{'border-color': signupForm.get('name')?.invalid
+                 && (signupForm.get('name')?.dirty || signupForm.get('name')?.touched) ? 'red' : ''}"
+                 placeholder="Ваше имя">
+          <div *ngIf="signupForm.get('name')?.invalid && (signupForm.get('name')?.dirty || signupForm.get('name')?.touched)">
+            <div class="text-danger" *ngIf="signupForm.get('name')?.errors?.['pattern']">
+              Имя начинается с большой буквы
+            </div>
+          </div>
+        </div>
+        <div class="auth-input">
+          <input type="text" class="input" formControlName="email" required
+                 [ngStyle]="{'border-color': signupForm.get('email')?.invalid
+                 && (signupForm.get('email')?.dirty || signupForm.get('email')?.touched) ? 'red' : ''}"
+                 placeholder="Электронная почта">
+          <div *ngIf="signupForm.get('email')?.invalid && (signupForm.get('email')?.dirty || signupForm.get('email')?.touched)">
+            <div class="text-danger" *ngIf="signupForm.get('email')?.errors?.['pattern'] || signupForm.get('email')?.errors?.['required']">
+              Введите корректный email
+            </div>
+          </div>
+        </div>
+        <div class="auth-input">
+          <input type="password" class="input" formControlName="password"
+                 [ngStyle]="{'border-color': signupForm.get('password')?.invalid
+                 && (signupForm.get('password')?.dirty || signupForm.get('password')?.touched) ? 'red' : ''}"
+                 placeholder="Пароль">
+          <div *ngIf="signupForm.get('password')?.invalid && (signupForm.get('password')?.dirty || signupForm.get('password')?.touched)">
+            <div class="text-danger" *ngIf="signupForm.get('password')?.errors?.['pattern'] || signupForm.get('password')?.errors?.['required']">
+              Пароль содержит не менее 8 символов
+            </div>
+          </div>
+        </div>
+        <div class="auth-checkbox">
+          <input type="checkbox" id="remember" formControlName="agree">
+          <label for="remember">Я принимаю <a routerLink="/useragreement" fragment="agree">условия пользовательского
+            соглашения</a> и даю <a routerLink="/useragreement" fragment="data">согласие на обработку персональных
+            данных</a>.</label>
+        </div>
+      </div>
+      <div class="auth-button">
+        <button class="button" [disabled]="signupForm.invalid" (click)="signup()">Зарегистрироваться</button>
+      </div>
+      <div class="auth-link">
+        Уже есть аккаунт? <a routerLink="/login">Войдите</a>
+      </div>
+    </div>
+    <div class="page-image">
+      <img src="../../../../assets/images/page/signup.png" alt="signup">
+    </div>
+  </div>
+</section>

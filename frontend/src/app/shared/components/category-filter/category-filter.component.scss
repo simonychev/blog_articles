@@ -1,0 +1,70 @@
+@import "../../../../assets/styles/variables";
+
+.blog-sorting {
+  box-sizing: border-box;
+  position: relative;
+  cursor: pointer;
+
+  .blog-sorting-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+
+    span {
+      width: 120px;
+    }
+
+    svg {
+      display: block;
+      cursor: pointer;
+    }
+  }
+
+  .blog-sorting-body {
+    position: absolute;
+    width: 100%;
+    z-index: 3;
+    padding: 12px 23px;
+    border-radius: 0 0 5px 5px;
+    border: 2px solid #B9D5FD;
+    background: #FFFFFF;
+    display: none;
+    box-sizing: border-box;
+
+    .blog-sorting-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+      cursor: pointer;
+      color: #BEBEBE;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &.active, &:hover {
+          color: $black-text-color;
+      }
+
+      svg {
+        display: block;
+      }
+    }
+  }
+
+  &.open {
+    width: 257px;
+
+    .blog-sorting-head {
+      border-radius: 5px 5px 0 0;
+      background: #B9D5FD;
+      padding: 12px 23px;
+    }
+
+    .blog-sorting-body {
+      display: block;
+    }
+  }
+}
